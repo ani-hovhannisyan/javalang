@@ -34,7 +34,8 @@ class PackageDeclaration(Declaration, Documented):
     attrs = ("name",)
 
 class ClassDeclaration(TypeDeclaration):
-    attrs = ("type_parameters", "extends", "implements")
+    attrs = ("type_parameters", "extends", "implements", "end_position")
+
 
 class EnumDeclaration(TypeDeclaration):
     attrs = ("implements",)
@@ -96,7 +97,8 @@ class FieldDeclaration(Member, Declaration):
     attrs = ("type", "declarators")
 
 class ConstructorDeclaration(Declaration, Documented):
-    attrs = ("type_parameters", "name", "parameters", "throws", "body")
+    attrs = ("type_parameters", "name", "parameters", "throws", "body",
+             "end_position")
 
 # ------------------------------------------------------------------------------
 
